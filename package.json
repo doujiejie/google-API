@@ -1,10 +1,11 @@
 {
-  "name": "ud864",
+  "name": "google-API",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier":"prettier *.html --write"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/udacity/ud864/issues"
   },
-  "homepage": "https://github.com/udacity/ud864#readme"
+  "homepage": "https://github.com/udacity/ud864#readme",
+  "devDependencies": {
+    "prettier": "^1.14.0"
+  }
 }
