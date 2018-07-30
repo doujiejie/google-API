@@ -56,12 +56,13 @@ and Google's Maps API Course, Lesson 2 -->
 
       function geocodeAddress(geocoder, resultsMap) {
         var address = document.getElementById('address').value;
-        geocoder.geocode({'address': address}, function(results, status) {
+        geocoder.geocode({address: address}, function(results, status) {
           if (status === google.maps.GeocoderStatus.OK) {
             resultsMap.setCenter(results[0].geometry.location);
             //TODO: Insert code here to take the first result's formatted address, and LOCATION.
-            document.getElementById('firstComponent').innerHTML="The Formatted Address is:"; // PUT STUFF HERE
-            document.getElementById('secondComponent').innerHTML="The Location is"; // PUT STUFF HERE
+            resultsMap.setZoom(15);
+            document.getElementById('firstComponent').innerHTML="The Formatted Address is: " + address; // PUT STUFF HERE
+            document.getElementById('secondComponent').innerHTML="The Location is "+address; // PUT STUFF HERE
           } else {
             alert('Geocode was not successful for the following reason: ' + status);
           }
@@ -70,7 +71,7 @@ and Google's Maps API Course, Lesson 2 -->
     </script>
     <!--TODO: Insert your API Key in the below call to load the API.-->
     <script async defer
-     src="https://maps.googleapis.com/maps/api/js?v=3&key=XXX&callback=initMap">
+     src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyB8A9ayd3v75pU2QAnOAh1SMBidZ9dfieo&callback=initMap">
     </script>
   </body>
 </html>
